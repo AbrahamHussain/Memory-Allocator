@@ -1,0 +1,15 @@
+1. 
+a. If the address did not originate in myalloc(), then it will look at a 
+random location in the myalloc() and will delete the information in that 
+location. 
+
+b. This case would also result in the same 
+
+c. This will not do anything since my code already released the memory
+
+
+2.
+In order to create a more robust allocator we can use a linked list so 
+we can first check if the address exists and if it doesn't then we can 
+just throw an error, but if the address does exist then we can easily 
+find that memory block and then free() it. 
